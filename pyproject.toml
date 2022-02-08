@@ -23,6 +23,13 @@ dist_path = "dist/"                         # where to put dists
 upload_to_pypi = false                      # don't auto-upload to PyPI
 remove_dist = false                         # don't remove dists
 
+[tool.usort]
+categories = ["future", "backport", "standard_library", "third_party", "first_party"]
+default_category = "third_party"
+
+[tool.usort.known]
+backport = ["backport"]
+
 [tool.poetry.urls]
 "Shawn's Website" = "https://www.shawwn.com"
 "Support me on Patreon" = "https://www.patreon.com/shawwn"
