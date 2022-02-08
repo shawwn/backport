@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "backport"
-version = "0.2.0"
+version = "0.3.0"
 description = "Backport various Python libraries (e.g. typing, types, dataclasses)) to old Python versions"
 authors = ["Shawn Presser"]
 license = "MIT"
