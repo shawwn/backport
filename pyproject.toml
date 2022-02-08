@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backport"
+version = "0.1.0"
+description = "Backport various Python libraries (e.g. typing, types, dataclasses)) to old Python versions"
+authors = ["Shawn Presser"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Shawn's Website" = "https://www.shawwn.com"
+"Support me on Patreon" = "https://www.patreon.com/shawwn"
+"@theshawwn on Twitter" = "https://www.twitter.com/theshawwn"
+"sillysaurusx on Hacker News" = "https://news.ycombinator.com/threads?id=sillysaurusx"
