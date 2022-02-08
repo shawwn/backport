@@ -1,6 +1,6 @@
 # backport
 
-> Backport various Python libraries (e.g. typing, types, dataclasses)) to old Python versions
+> Backport various Python libraries (e.g. typing, types, dataclasses) to old Python versions
 
 WARNING: This repo is in development. It was automatically generated with [mkpylib](https://github.com/shawwn/scrap/blob/master/mkpylib). If you're reading this message, it means that I use this repo for my own purposes right now. It might not do anything at all; the default functionality is `print('TODO')`.
 
