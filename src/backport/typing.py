@@ -30,8 +30,6 @@ import sys
 from . import types
 from .types import WrapperDescriptorType, MethodWrapperType, MethodDescriptorType, GenericAlias
 
-sys.modules['typing'] = sys.modules[__name__]
-
 # Please keep __all__ alphabetized within each category.
 __all__ = [
     # Super-special typing primitives.

@@ -3,10 +3,6 @@ Define names for built-in types that aren't directly accessible as a builtin.
 """
 import sys
 
-sys.modules['types'] = sys.modules[__name__]
-
-_verison_info = sys.version_info
-
 # Iterators in Python aren't a matter of type but of protocol.  A large
 # and changing number of builtin types implement *some* flavor of
 # iterator.  Don't check the type!  Use hasattr to check for both
@@ -301,15 +297,19 @@ def coroutine(func):
 
     return wrapped
 
-if _verison_info >= (3, 9):
+try:
+    # Python >= 3.9
     GenericAlias = type(list[int])
-else:
-    GenericAlias = type("GenericAlias", (), {})
+except TypeError:
+    # Python < 3.9
+    GenericAlias = new_class("GenericAlias")
 
-if _verison_info >= (3, 10):
-    UnionType = type(int | str)
-else:
-    UnionType = type("UnionType", (), {})
+try:
+    # Python >= 3.10
+    UnionType = type(eval('int | str'))
+except TypeError:
+    # Python < 3.10
+    UnionType = new_class("UnionType")
 
 EllipsisType = type(Ellipsis)
 NoneType = type(None)

@@ -7,11 +7,8 @@ import keyword
 import builtins
 import functools
 from . import abc_ext
-import abc
 import _thread
 from .types import FunctionType, GenericAlias
-
-sys.modules['dataclasses'] = sys.modules[__name__]
 
 __all__ = ['dataclass',
            'field',

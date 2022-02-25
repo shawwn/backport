@@ -3,9 +3,9 @@ from __future__ import annotations
 import backport
 
 import abc
-import dataclasses
-import types
-import typing
+from backport import dataclasses
+from backport import types
+from backport import typing
 import unittest
 
 from importlib.metadata import version

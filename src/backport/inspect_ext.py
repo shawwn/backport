@@ -3,7 +3,7 @@ import inspect
 try:
     from inspect import get_annotations
 except ImportError:
-    from . import types
+    import types
     import functools
     import sys
 
